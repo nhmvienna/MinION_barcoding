@@ -1,11 +1,11 @@
 ### subset to first 1000 reads
 
-head -4000 /media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq  \
-  > /media/inter/mkapun/projects/MinION_barcoding/data/subset.fastq
+head -4000 ~/github/MinION_barcoding/data/test/Supplementary_File1_reads.fastq  \
+  > ~/github/MinION_barcoding/data/subset.fastq
 
 ### investigate with nanoplot
 
-mkdir /media/inter/mkapun/projects/MinION_barcoding/results
+mkdir ~/github/MinION_barcoding/results
 
 echo '''
 #!/bin/sh
@@ -14,7 +14,7 @@ echo '''
 #PBS -N Nanoplot
 
 ## Redirect output stream to this file.
-#PBS -o /media/inter/mkapun/projects/MinION_barcoding/NanoPlot_log.txt
+#PBS -o ~/github/MinION_barcoding/NanoPlot_log.txt
 
 ## Stream Standard Output AND Standard Error to outputfile (see above)
 #PBS -j oe
@@ -34,12 +34,12 @@ conda activate nanoplot_1.32.1
 
 NanoPlot \
   --fastq subset.fastq \
-  -o /media/inter/mkapun/projects/MinION_barcoding/results/subset \
+  -o ~/github/MinION_barcoding/results/subset \
   -p subset
 
-''' > /media/inter/mkapun/projects/MinION_barcoding/shell/NanoPlot_qsub.sh
+''' > ~/github/MinION_barcoding/shell/NanoPlot_qsub.sh
 
-qsub /media/inter/mkapun/projects/MinION_barcoding/shell/NanoPlot_qsub.sh
+qsub ~/github/MinION_barcoding/shell/NanoPlot_qsub.sh
 
 ### load NGSspeciesID
 
@@ -50,7 +50,7 @@ echo '''
 #PBS -N NGSspeciesID
 
 ## Redirect output stream to this file.
-#PBS -o /media/inter/mkapun/projects/MinION_barcoding/NGSspeciesID_log.txt
+#PBS -o ~/github/MinION_barcoding/NGSspeciesID_log.txt
 
 ## Stream Standard Output AND Standard Error to outputfile (see above)
 #PBS -j oe
@@ -72,13 +72,13 @@ NGSpeciesID  \
   --s 100 \
   --t 20 \
   --medaka \
-  --primer_file /media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File3_primer.txt \
-  --fastq /media/inter/mkapun/projects/MinION_barcoding/data/subset.fastq \
-  --outfolder /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus
+  --primer_file ~/github/MinION_barcoding/data/test/Supplementary_File3_primer.txt \
+  --fastq ~/github/MinION_barcoding/data/subset.fastq \
+  --outfolder ~/github/MinION_barcoding/results/subset_consensus
 
-''' > /media/inter/mkapun/projects/MinION_barcoding/shell/NGSspeciesID_qsub.sh
+''' > ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
 
-qsub /media/inter/mkapun/projects/MinION_barcoding/shell/NGSspeciesID_qsub.sh
+qsub ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
 
 echo '''
 #!/bin/sh
@@ -87,7 +87,7 @@ echo '''
 #PBS -N BlastN
 
 ## Redirect output stream to this file.
-#PBS -o /media/inter/mkapun/projects/MinION_barcoding/BlastN_log.txt
+#PBS -o ~/github/MinION_barcoding/BlastN_log.txt
 
 ## Stream Standard Output AND Standard Error to outputfile (see above)
 #PBS -j oe
@@ -101,16 +101,16 @@ module load Alignment/ncbi-BLAST-2.12.0
 
 ######## run analyses #######
 
-mkdir /media/inter/mkapun/projects/MinION_barcoding/results/blast
+mkdir ~/github/MinION_barcoding/results/blast
 
 blastn \
 -num_threads 20 \
 -evalue 1e-100 \
 -outfmt "6 qseqid sseqid sscinames slen qlen pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
 -db /media/inter/scratch_backup/NCBI_nt_DB_210714/nt \
--query /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus/consensus_reference_4.fasta \
-> /media/inter/mkapun/projects/MinION_barcoding/results/blast/blastn.txt
+-query ~/github/MinION_barcoding/results/subset_consensus/consensus_reference_4.fasta \
+> ~/github/MinION_barcoding/results/blast/blastn.txt
 
-''' > /media/inter/mkapun/projects/MinION_barcoding/shell/BlastN_qsub.sh
+''' > ~/github/MinION_barcoding/shell/BlastN_qsub.sh
 
-qsub /media/inter/mkapun/projects/MinION_barcoding/shellBlastN_qsub.sh
+qsub ~/github/MinION_barcoding/shellBlastN_qsub.sh
