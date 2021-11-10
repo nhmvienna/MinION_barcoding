@@ -114,3 +114,6 @@ blastn \
 ''' > ~/github/MinION_barcoding/shell/BlastN_qsub.sh
 
 qsub ~/github/MinION_barcoding/shellBlastN_qsub.sh
+
+## run analyses amplicon_sorter ##
+
