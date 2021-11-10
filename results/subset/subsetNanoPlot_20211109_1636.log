@@ -1,0 +1,41 @@
+2021-11-09 16:36:41,882 NanoPlot 1.32.1 started with arguments Namespace(N50=False, alength=False, bam=None, barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=None, fastq_minimal=None, fastq_rich=['subset.fastq'], feather=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=None, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='/media/inter/mkapun/projects/MinION_barcoding/results/subset', path='/media/inter/mkapun/projects/MinION_barcoding/results/subset/subset', percentqual=False, pickle=None, plots=['kde', 'dot'], prefix='subset', raw=False, readtype='1D', runtime_until=None, store=False, summary=None, threads=4, title=None, tsv_stats=False, ubam=None, verbose=False)
+2021-11-09 16:36:41,883 Python version is: 3.7.11 (default, Jul 27 2021, 14:32:16)  [GCC 7.5.0]
+2021-11-09 16:36:41,883 NanoPlot:  valid output format png
+2021-11-09 16:36:41,904 Nanoget: Starting to collect statistics from rich fastq file.
+2021-11-09 16:36:41,938 list index out of range
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/process.py", line 239, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/process.py", line 198, in _process_chunk
+    return [fn(*args) for args in chunk]
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/process.py", line 198, in <listcomp>
+    return [fn(*args) for args in chunk]
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoget/extraction_functions.py", line 390, in process_fastq_rich
+    read_info = info_to_dict(record.description)
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoget/extraction_functions.py", line 370, in info_to_dict
+    return {field.split('=')[0]: field.split('=')[1] for field in info.split(' ')[1:]}
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoget/extraction_functions.py", line 370, in <dictcomp>
+    return {field.split('=')[0]: field.split('=')[1] for field in info.split(' ')[1:]}
+IndexError: list index out of range
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoplot/NanoPlot.py", line 66, in main
+    keep_supp=not(args.no_supplementary))
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoget/nanoget.py", line 94, in get_input
+    dfs=[out for out in executor.map(extraction_function, files)],
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoget/nanoget.py", line 94, in <listcomp>
+    dfs=[out for out in executor.map(extraction_function, files)],
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/process.py", line 483, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/_base.py", line 598, in result_iterator
+    yield fs.pop().result()
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/_base.py", line 435, in result
+    return self.__get_result()
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/concurrent/futures/_base.py", line 384, in __get_result
+    raise self._exception
+IndexError: list index out of range

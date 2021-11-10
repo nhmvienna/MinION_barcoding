@@ -1,0 +1,14 @@
+Checking program versions
+This is medaka 0.11.5
+Program    Version    Required   Pass     
+bgzip      1.9        1.9        True     
+minimap2   2.17       2.11       True     
+samtools   1.9        1.9        True     
+tabix      1.9        1.9        True     
+Warning: Output will be overwritten (-f flag)
+Aligning basecalls to draft
+Removing previous index file /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus/consensus_reference_40.fasta.mmi
+Removing previous index file /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus/consensus_reference_40.fasta.fai
+Running medaka consensus
+Running medaka stitch
+Polished assembly written to /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus/medaka_cl_id_40/consensus.fasta, have a nice day.
