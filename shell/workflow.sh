@@ -40,12 +40,12 @@ qsub ~/github/MinION_barcoding/shell/NanoPlot_qsub.sh
 ## Demultiplex samples
 
 python minibar.py \
-Supplementary_File3_primer.txt \
-Supplementary_File1_reads.fastq \
--T \
--F \
--e 3 \
--E 11 \
+  Supplementary_File3_primer.txt \
+  Supplementary_File1_reads.fastq \
+  -T \
+  -F \
+  -e 3 \
+  -E 11 \
 
 Expected results:
 
@@ -154,12 +154,12 @@ module load Alignment/ncbi-BLAST-2.12.0
 mkdir ~/github/MinION_barcoding/results/blast
 
 blastn \
--num_threads 20 \
--evalue 1e-100 \
--outfmt "6 qseqid sseqid sscinames slen qlen pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
--db /media/inter/scratch_backup/NCBI_nt_DB_210714/nt \
--query ~/github/MinION_barcoding/results/subset_consensus/consensus_reference_4.fasta \
-> ~/github/MinION_barcoding/results/blast/blastn.txt
+  -num_threads 20 \
+  -evalue 1e-100 \
+  -outfmt "6 qseqid sseqid sscinames slen qlen pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
+  -db /media/inter/scratch_backup/NCBI_nt_DB_210714/nt \
+  -query ~/github/MinION_barcoding/results/subset_consensus/consensus_reference_4.fasta \
+  > ~/github/MinION_barcoding/results/blast/blastn.txt
 
 ''' > ~/github/MinION_barcoding/shell/BlastN_qsub.sh
 
@@ -169,34 +169,34 @@ qsub ~/github/MinION_barcoding/shellBlastN_qsub.sh
 ######## run analyses - single sample  #######
 
 python3.6 amplicon_sorter.py \
--i ~/github/MinION_barcoding/data/subset.fastq \
--o ~/github/MinION_barcoding/results/subset_consensus_ampS \
--np 4 \
--min 600 \
--max 1000 \
--maxr 1000 
+  -i ~/github/MinION_barcoding/data/subset.fastq \
+  -o ~/github/MinION_barcoding/results/subset_consensus_ampS \
+  -np 4 \
+  -min 600 \
+  -max 1000 \
+  -maxr 1000 
 
 ######## run analyses - mixed sample  #######
 
 python3.6 amplicon_sorter.py \
--i ~/github/MinION_barcoding/data/subset.fastq \
--o ~/github/MinION_barcoding/results/subset_consensus_ampS \
--np 4 \
--min 600 \
--max 1000 \
--maxr 1000 \
--sc 93 \
--ssg 85
+  -i ~/github/MinION_barcoding/data/subset.fastq \
+  -o ~/github/MinION_barcoding/results/subset_consensus_ampS \
+  -np 4 \
+  -min 600 \
+  -max 1000 \
+  -maxr 1000 \
+  -sc 93 \
+  -ssg 85
 
 ######## run analyses #######
 
 blastn \
--num_threads 20 \
--evalue 1e-100 \
--outfmt "6 qseqid sseqid sscinames slen qlen pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
--db /media/inter/scratch_backup/NCBI_nt_DB_210714/nt \
--query ~/github/MinION_barcoding/results/subset_consensus_ampS \
-> ~/github/MinION_barcoding/results/blast/blastn.txt
+  -num_threads 20 \
+  -evalue 1e-100 \
+  -outfmt "6 qseqid sseqid sscinames slen qlen pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
+  -db /media/inter/scratch_backup/NCBI_nt_DB_210714/nt \
+  -query ~/github/MinION_barcoding/results/subset_consensus_ampS \
+  > ~/github/MinION_barcoding/results/blast/blastn.txt
 
 ''' > ~/github/MinION_barcoding/shell/BlastN_qsub.sh
 
