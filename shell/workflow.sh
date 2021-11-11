@@ -70,7 +70,7 @@ echo '''
 
 conda activate NGSpeciesID
 
-######## run analyses #######
+######## run analyses - single sample and Medaka #######
 
 NGSpeciesID  \
   --ont \
@@ -82,7 +82,49 @@ NGSpeciesID  \
   --medaka \
   --primer_file ~/github/MinION_barcoding/data/test/Supplementary_File3_primer.txt \
   --fastq ~/github/MinION_barcoding/data/subset.fastq \
-  --outfolder ~/github/MinION_barcoding/results/subset_consensus
+  --outfolder ~/github/MinION_barcoding/results/subset_consensus_medaka
+
+''' > ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
+
+qsub ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
+
+echo '''
+
+
+######## run analyses - single sample and Racon #######
+
+NGSpeciesID  \
+  --ont \
+  --consensus \
+  --sample_size 1000 \
+  --m 800 \
+  --s 100 \
+  --t 20 \
+  --racon \
+  --primer_file ~/github/MinION_barcoding/data/test/Supplementary_File3_primer.txt \
+  --fastq ~/github/MinION_barcoding/data/subset.fastq \
+  --outfolder ~/github/MinION_barcoding/results/subset_consensus_racon
+
+''' > ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
+
+qsub ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
+
+echo '''
+
+
+######## run analyses - mixed sample and Medaka #######
+
+NGSpeciesID  \
+  --ont \
+  --consensus \
+  --sample_size 1000 \
+  --m 800 \
+  --s 100 \
+  --t 20 \
+  --medaka \
+  --primer_file ~/github/MinION_barcoding/data/test/Supplementary_File3_primer.txt \
+  --fastq ~/github/MinION_barcoding/data/subset.fastq \
+  --outfolder ~/github/MinION_barcoding/results/subset_consensus_mixed
 
 ''' > ~/github/MinION_barcoding/shell/NGSspeciesID_qsub.sh
 
@@ -123,7 +165,18 @@ blastn \
 
 qsub ~/github/MinION_barcoding/shellBlastN_qsub.sh
 
-## run analyses amplicon_sorter ##
+######## amplicon_sorter #######
+######## run analyses - single sample  #######
+
+python3.6 amplicon_sorter.py \
+-i ~/github/MinION_barcoding/data/subset.fastq \
+-o ~/github/MinION_barcoding/results/subset_consensus_ampS \
+-np 4 \
+-min 600 \
+-max 1000 \
+-maxr 1000 
+
+######## run analyses - mixed sample  #######
 
 python3.6 amplicon_sorter.py \
 -i ~/github/MinION_barcoding/data/subset.fastq \
@@ -135,3 +188,16 @@ python3.6 amplicon_sorter.py \
 -sc 93 \
 -ssg 85
 
+######## run analyses #######
+
+blastn \
+-num_threads 20 \
+-evalue 1e-100 \
+-outfmt "6 qseqid sseqid sscinames slen qlen pident length mismatch gapopen qstart qend sstart send evalue bitscore" \
+-db /media/inter/scratch_backup/NCBI_nt_DB_210714/nt \
+-query ~/github/MinION_barcoding/results/subset_consensus_ampS \
+> ~/github/MinION_barcoding/results/blast/blastn.txt
+
+''' > ~/github/MinION_barcoding/shell/BlastN_qsub.sh
+
+qsub ~/github/MinION_barcoding/shellBlastN_qsub.sh
