@@ -1,8 +1,3 @@
-### subset to first 1000 reads
-
-head -4000 ~/github/MinION_barcoding/data/test/Supplementary_File1_reads.fastq  \
-  > ~/github/MinION_barcoding/data/subset.fastq
-
 ### investigate with nanoplot
 
 mkdir ~/github/MinION_barcoding/results
@@ -33,13 +28,26 @@ conda activate nanoplot_1.32.1
 ## check out quality of FASTQ
 
 NanoPlot \
-  --fastq subset.fastq \
-  -o ~/github/MinION_barcoding/results/subset \
+  --fastq Supplementary_File1_reads.fastq \
+  -o ~/github/MinION_barcoding/results/nanoplot \
   -p subset
 
 ''' > ~/github/MinION_barcoding/shell/NanoPlot_qsub.sh
 
 qsub ~/github/MinION_barcoding/shell/NanoPlot_qsub.sh
+
+
+## Demultiplex samples
+
+python minibar.py \
+Supplementary_File3_primer.txt \
+Supplementary_File1_reads.fastq \
+-T \
+-F \
+-e 3 \
+-E 11 \
+
+Expected results:
 
 ### load NGSspeciesID
 
