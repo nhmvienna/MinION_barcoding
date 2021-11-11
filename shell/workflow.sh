@@ -67,7 +67,7 @@ conda activate NGSpeciesID
 NGSpeciesID  \
   --ont \
   --consensus \
-  --sample_size 300 \
+  --sample_size 1000 \
   --m 800 \
   --s 100 \
   --t 20 \
@@ -116,4 +116,14 @@ blastn \
 qsub ~/github/MinION_barcoding/shellBlastN_qsub.sh
 
 ## run analyses amplicon_sorter ##
+
+python3.6 amplicon_sorter.py \
+-i ~/github/MinION_barcoding/data/subset.fastq \
+-o ~/github/MinION_barcoding/results/subset_consensus_ampS \
+-np 4 \
+-min 600 \
+-max 1000 \
+-maxr 1000 \
+-sc 93 \
+-ssg 85
 
