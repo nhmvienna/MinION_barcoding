@@ -1,0 +1,2 @@
+/media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File2_minibar.txt /media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq Index edit dist 3, Primer edit dist 11, Search Len 80, Search Method 3, Output Type T
+30003000 seqs: H 1343 HH 460 Hh 359 hh 338 IDs 1157 Mult_IDs 0 (0.2909s)

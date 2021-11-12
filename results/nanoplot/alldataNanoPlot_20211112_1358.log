@@ -1,0 +1,132 @@
+2021-11-12 13:58:54,402 NanoPlot 1.32.1 started with arguments Namespace(N50=False, alength=False, bam=None, barcoded=False, color='#4CB391', colormap='Greens', cram=None, downsample=None, dpi=100, drop_outliers=False, fasta=None, fastq=['/media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq'], fastq_minimal=None, fastq_rich=None, feather=None, font_scale=1, format='png', hide_stats=False, huge=False, listcolormaps=False, listcolors=False, loglength=False, maxlength=None, minlength=None, minqual=None, no_N50=False, no_supplementary=False, outdir='/media/inter/mkapun/projects/MinION_barcoding/results/nanoplot', path='/media/inter/mkapun/projects/MinION_barcoding/results/nanoplot/alldata', percentqual=False, pickle=None, plots=['kde', 'dot'], prefix='alldata', raw=False, readtype='1D', runtime_until=None, store=False, summary=None, threads=4, title=None, tsv_stats=False, ubam=None, verbose=False)
+2021-11-12 13:58:54,402 Python version is: 3.7.11 (default, Jul 27 2021, 14:32:16)  [GCC 7.5.0]
+2021-11-12 13:58:54,403 NanoPlot:  valid output format png
+2021-11-12 13:58:54,410 Nanoget: Starting to collect statistics from plain fastq file.
+2021-11-12 13:58:54,641 Reduced DataFrame memory usage from 0.06866455078125Mb to 0.0400543212890625Mb
+2021-11-12 13:58:54,651 Nanoget: Gathered all metrics of 3000 reads
+2021-11-12 13:58:54,657 Calculated statistics
+2021-11-12 13:58:54,657 Using sequenced read lengths for plotting.
+2021-11-12 13:58:54,658 NanoPlot:  Valid color #4CB391.
+2021-11-12 13:58:54,659 NanoPlot:  Valid colormap Greens.
+2021-11-12 13:58:54,659 NanoPlot:  Creating length plots for Read length.
+2021-11-12 13:58:54,659 NanoPlot:  Using 3000 reads maximum of 1600bp.
+2021-11-12 13:58:55,508 Nanoplotter: orca not found, not creating static image of html. See https://github.com/plotly/orca
+2021-11-12 13:58:55,508 
+The orca executable is required in order to export figures as static images,
+but the executable that was found at '/opt/anaconda3/envs/nanoplot_1.32.1/bin/orca'
+does not seem to be a valid plotly orca executable. Please refer to the end of
+this message for details on what went wrong.
+
+If you haven't installed orca yet, you can do so using conda as follows:
+
+    $ conda install -c plotly plotly-orca
+
+Alternatively, see other installation methods in the orca project README at
+https://github.com/plotly/orca
+
+After installation is complete, no further configuration should be needed.
+
+If you have installed orca, then for some reason plotly.py was unable to
+locate it. In this case, set the `plotly.io.orca.config.executable`
+property to the full path of your orca executable. For example:
+
+    >>> plotly.io.orca.config.executable = '/path/to/orca'
+
+After updating this executable property, try the export operation again.
+If it is successful then you may want to save this configuration so that it
+will be applied automatically in future sessions. You can do this as follows:
+
+    >>> plotly.io.orca.config.save()
+
+If you're still having trouble, feel free to ask for help on the forums at
+https://community.plot.ly/c/api/python
+
+Here is the error that was returned by the command
+    $ /opt/anaconda3/envs/nanoplot_1.32.1/bin/orca --help
+
+[Return code: 1]
+
+(orca:40051): Gtk-WARNING **: 13:58:55.503: cannot open display: 
+
+Note: When used on Linux, orca requires an X11 display server, but none was
+detected. Please install Xvfb and configure plotly.py to run orca using Xvfb
+as follows:
+
+    >>> import plotly.io as pio
+    >>> pio.orca.config.use_xvfb = True
+    
+You can save this configuration for use in future sessions as follows:
+
+    >>> pio.orca.config.save() 
+    
+See https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
+for more info on Xvfb
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/nanoplotter/plot.py", line 60, in save_static
+    pio.write_image(self.fig, self.path.replace('html', 'png'))
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/plotly/io/_kaleido.py", line 252, in write_image
+    engine=engine,
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/plotly/io/_kaleido.py", line 109, in to_image
+    validate=validate,
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/plotly/io/_orca.py", line 1535, in to_image
+    ensure_server()
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/plotly/io/_orca.py", line 1390, in ensure_server
+    validate_executable()
+  File "/opt/anaconda3/envs/nanoplot_1.32.1/lib/python3.7/site-packages/plotly/io/_orca.py", line 1184, in validate_executable
+    raise ValueError(err_msg)
+ValueError: 
+The orca executable is required in order to export figures as static images,
+but the executable that was found at '/opt/anaconda3/envs/nanoplot_1.32.1/bin/orca'
+does not seem to be a valid plotly orca executable. Please refer to the end of
+this message for details on what went wrong.
+
+If you haven't installed orca yet, you can do so using conda as follows:
+
+    $ conda install -c plotly plotly-orca
+
+Alternatively, see other installation methods in the orca project README at
+https://github.com/plotly/orca
+
+After installation is complete, no further configuration should be needed.
+
+If you have installed orca, then for some reason plotly.py was unable to
+locate it. In this case, set the `plotly.io.orca.config.executable`
+property to the full path of your orca executable. For example:
+
+    >>> plotly.io.orca.config.executable = '/path/to/orca'
+
+After updating this executable property, try the export operation again.
+If it is successful then you may want to save this configuration so that it
+will be applied automatically in future sessions. You can do this as follows:
+
+    >>> plotly.io.orca.config.save()
+
+If you're still having trouble, feel free to ask for help on the forums at
+https://community.plot.ly/c/api/python
+
+Here is the error that was returned by the command
+    $ /opt/anaconda3/envs/nanoplot_1.32.1/bin/orca --help
+
+[Return code: 1]
+
+(orca:40051): Gtk-WARNING **: 13:58:55.503: cannot open display: 
+
+Note: When used on Linux, orca requires an X11 display server, but none was
+detected. Please install Xvfb and configure plotly.py to run orca using Xvfb
+as follows:
+
+    >>> import plotly.io as pio
+    >>> pio.orca.config.use_xvfb = True
+    
+You can save this configuration for use in future sessions as follows:
+
+    >>> pio.orca.config.save() 
+    
+See https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml
+for more info on Xvfb
+
+2021-11-12 13:58:55,717 Created length plots
+2021-11-12 13:58:55,718 NanoPlot:  Creating Read lengths vs Average read quality plots using statistics from 3000 reads.
+2021-11-12 13:58:56,694 Created LengthvsQual plot
+2021-11-12 13:58:56,694 Writing html report.
+2021-11-12 13:58:57,594 Finished!

@@ -1,0 +1,30 @@
+consensus_cl_id_50_total_supporting_reads_188	gi|1799624477|gb|MN122852.1|	Gadus morhua	Atlantic cod	16616	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084251|emb|LS999407.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084237|emb|LS999106.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084223|emb|LS999105.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084209|emb|LS999104.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084195|emb|LS999103.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084181|emb|LS999102.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084167|emb|LS999101.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1593084153|emb|LS999100.1|	Gadus morhua	Atlantic cod	16656	744	97.177	673	12	7	1	669	5490	6159	0.0	1131
+consensus_cl_id_50_total_supporting_reads_188	gi|1584437680|gb|MK011280.1|	Gadus morhua	Atlantic cod	1551	744	97.177	673	12	7	1	669	47	716	0.0	1131
+consensus_cl_id_51_total_supporting_reads_421	gi|1798174145|gb|MN122861.1|	Merlangius merlangus	whiting	16660	654	94.394	660	30	6	1	654	6146	5488	0.0	1007
+consensus_cl_id_51_total_supporting_reads_421	gi|1584437686|gb|MK011283.1|	Merlangius merlangus	whiting	1551	654	94.394	660	30	6	1	654	706	48	0.0	1007
+consensus_cl_id_51_total_supporting_reads_421	gi|94481736|gb|DQ356943.1|	Merlangius merlangus	whiting	15511	654	94.394	660	30	6	1	654	6105	5447	0.0	1007
+consensus_cl_id_51_total_supporting_reads_421	gi|66802157|gb|DQ020496.1|	Merlangius merlangus	whiting	16569	654	94.394	660	30	6	1	654	6148	5490	0.0	1007
+consensus_cl_id_51_total_supporting_reads_421	gi|1112921994|gb|KX267068.1|	Gadus morhua	Atlantic cod	16576	654	94.242	660	31	6	1	654	6149	5491	0.0	1002
+consensus_cl_id_51_total_supporting_reads_421	gi|1112921952|gb|KX267065.1|	Gadus morhua	Atlantic cod	16576	654	94.242	660	31	6	1	654	6149	5491	0.0	1002
+consensus_cl_id_51_total_supporting_reads_421	gi|1112920734|gb|KX266978.1|	Gadus morhua	Atlantic cod	16576	654	94.242	660	31	6	1	654	6149	5491	0.0	1002
+consensus_cl_id_51_total_supporting_reads_421	gi|1019366591|dbj|LC146693.1|	Gadus morhua	Atlantic cod	669	654	94.242	660	31	6	1	654	668	10	0.0	1002
+consensus_cl_id_51_total_supporting_reads_421	gi|148374019|gb|EF609406.1|	Merlangius merlangus	whiting	655	654	94.360	656	30	6	2	651	655	1	0.0	1000
+consensus_cl_id_51_total_supporting_reads_421	gi|607345981|gb|KJ205014.1|	Merlangius merlangus	whiting	652	654	94.737	646	27	6	12	651	645	1	0.0	998
+consensus_cl_id_6_total_supporting_reads_165	gi|1584437684|gb|MK011282.1|	Melanogrammus aeglefinus	haddock	1551	751	95.051	687	25	9	1	683	47	728	0.0	1072
+consensus_cl_id_6_total_supporting_reads_165	gi|94481723|gb|DQ356942.1|	Melanogrammus aeglefinus	haddock	15511	751	94.905	687	26	9	1	683	5446	6127	0.0	1066
+consensus_cl_id_6_total_supporting_reads_165	gi|66864728|gb|DQ020497.1|	Melanogrammus aeglefinus	haddock	16585	751	94.905	687	26	9	1	683	5494	6175	0.0	1066
+consensus_cl_id_6_total_supporting_reads_165	gi|124377065|emb|AM489717.1|	Melanogrammus aeglefinus	haddock	16584	751	95.259	675	24	8	1	672	5492	6161	0.0	1062
+consensus_cl_id_6_total_supporting_reads_165	gi|1019366609|dbj|LC146702.1|	Melanogrammus aeglefinus	haddock	677	751	95.252	674	24	8	1	671	9	677	0.0	1061
+consensus_cl_id_6_total_supporting_reads_165	gi|606240563|gb|KJ205288.1|	Melanogrammus aeglefinus	haddock	658	751	95.619	662	22	7	2	660	1	658	0.0	1055
+consensus_cl_id_6_total_supporting_reads_165	gi|1040626506|gb|KX119471.1|	Melanogrammus aeglefinus	haddock	655	751	95.599	659	22	7	5	660	1	655	0.0	1050
+consensus_cl_id_6_total_supporting_reads_165	gi|825714972|gb|KP112120.1|	Actinopterygii environmental sample	Actinopterygii environmental sample	650	751	95.865	653	20	7	5	654	1	649	0.0	1050
+consensus_cl_id_6_total_supporting_reads_165	gi|825712998|gb|KP111133.1|	Actinopterygii environmental sample	Actinopterygii environmental sample	650	751	95.865	653	20	7	5	654	1	649	0.0	1050
+consensus_cl_id_6_total_supporting_reads_165	gi|607345965|gb|KJ205006.1|	Melanogrammus aeglefinus	haddock	652	751	95.865	653	20	7	5	654	1	649	0.0	1050

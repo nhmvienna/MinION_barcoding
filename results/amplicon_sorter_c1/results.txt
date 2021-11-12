@@ -1,0 +1,40 @@
+-----------------------------------------------------------
+amplicon_sorter version: 2021-09-21
+-----------------------------------------------------------
+- date and time = November 12, 2021, 02:54PM
+- input file = /media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq
+- output folder = /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_c1
+- minlength = 600
+- maxlength = 1000
+- maxreads = 300
+- n_processes = 20
+- similar_genes = 80.0
+- similar_species_groups = 93.0
+- similar_species = 85.0
+- similar_consensus = 96.0
+- save_fastq = False
+- random = False
+- all_reads = False
+- histogram_only = False
+- species_only = False
+-----------------------------------------------------------
+-----------------------------------------------------------
+amplicon_sorter version: 2021-09-21
+-----------------------------------------------------------
+- date and time = November 12, 2021, 02:54PM
+- input file = /media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq
+- output folder = /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_c1
+- minlength = 600
+- maxlength = 1000
+- maxreads = 300
+- n_processes = 20
+- similar_genes = 80.0
+- similar_species_groups = 93.0
+- similar_species = 85.0
+- similar_consensus = 96.0
+- save_fastq = False
+- random = False
+- all_reads = False
+- histogram_only = False
+- species_only = False
+-----------------------------------------------------------

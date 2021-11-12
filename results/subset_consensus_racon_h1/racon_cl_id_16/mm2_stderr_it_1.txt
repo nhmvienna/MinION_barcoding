@@ -1,0 +1,10 @@
+[M::mm_idx_gen::0.001*3.74] collected minimizers
+[M::mm_idx_gen::0.001*3.26] sorted minimizers
+[M::main::0.001*3.24] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.001*3.11] mid_occ = 2
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.001*3.06] distinct minimizers: 127 (100.00% are singletons); average occurrences: 1.000; average spacing: 5.354
+[M::worker_pipeline::0.005*2.45] mapped 297 sequences
+[M::main] Version: 2.17-r941
+[M::main] CMD: minimap2 -x map-ont /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus_racon_h1/racon_cl_id_16/racon_polished_it_0.fasta /media/inter/mkapun/projects/MinION_barcoding/results/subset_consensus_racon_h1/reads_to_consensus_16.fastq
+[M::main] Real time: 0.005 sec; CPU: 0.012 sec; Peak RSS: 0.042 GB
