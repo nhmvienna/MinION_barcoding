@@ -1,91 +1,0 @@
-Reading /media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq
-/media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq contains 389 reads.
-Saved "/media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1_total_outputfig.pdf" as a Read Length Histogram.
---> Low number of reads, reading all 356 out of 356 sequences between 600 and 1000bp
-processing: file_0.todo
-Filtering compared sequences for best hits and create groups
---> Number of groups before merge: 22
---> Number of groups after merge: 1
--> Merging based on consensus of 50 reads per group
-0.0% consensuses made                                                --> Number of groups before merge: 1
---> Number of groups after merge: 1
---> Number of groups after removing groups with less than 5 sequences: 1
-  sample_c1_0.group contains 306 sequences (85.96%)
-306/356 sequences assigned in groups (85.96%)
------------------------------------------------------------
-amplicon_sorter version: 2021-09-21
------------------------------------------------------------
-- date and time = November 12, 2021, 02:54PM
-- input file = /media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq
-- output folder = /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_c1
-- minlength = 600
-- maxlength = 1000
-- maxreads = 300
-- n_processes = 20
-- similar_genes = 80.0
-- similar_species_groups = 93.0
-- similar_species = 85.0
-- similar_consensus = 96.0
-- save_fastq = False
-- random = False
-- all_reads = False
-- histogram_only = False
-- species_only = False
------------------------------------------------------------
------------------------------------------------------------
-amplicon_sorter version: 2021-09-21
------------------------------------------------------------
-- date and time = November 12, 2021, 02:54PM
-- input file = /media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq
-- output folder = /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_c1
-- minlength = 600
-- maxlength = 1000
-- maxreads = 300
-- n_processes = 20
-- similar_genes = 80.0
-- similar_species_groups = 93.0
-- similar_species = 85.0
-- similar_consensus = 96.0
-- save_fastq = False
-- random = False
-- all_reads = False
-- histogram_only = False
-- species_only = False
------------------------------------------------------------
-Reading /media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq
-/media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq contains 3000 reads.
-Saved "/media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads_total_outputfig.pdf" as a Read Length Histogram.
---> Reading 900 out of 2844 sequences between 600 and 1000bp
-processing: file_0.todo
-Filtering compared sequences for best hits and create groups
---> Number of groups before merge: 52
---> Number of groups after merge: 11
--> Merging based on consensus of 50 reads per group
-0.0% consensuses made9.1% consensuses made18.2% consensuses made27.3% consensuses made36.4% consensuses made45.5% consensuses made54.5% consensuses made63.6% consensuses made72.7% consensuses made81.8% consensuses made90.9% consensuses made                                                9.1% comparisons done18.2% comparisons done27.3% comparisons done36.4% comparisons done45.5% comparisons done54.5% comparisons done63.6% comparisons done72.7% comparisons done81.8% comparisons done90.9% comparisons done--> Number of groups before merge: 11
---> Number of groups after merge: 2
-0.0% consensuses made50.0% consensuses made                                                50.0% comparisons done--> Number of groups before merge: 2
---> Number of groups after merge: 2
---> Number of groups after removing groups with less than 5 sequences: 2
-  Supplementary_File1_reads_0.group contains 718 sequences (79.78%)
-  Supplementary_File1_reads_1.group contains 24 sequences (2.67%)
-742/900 sequences assigned in groups (82.44%)
------------------------------------------------------------
-amplicon_sorter version: 2021-09-21
------------------------------------------------------------
-- date and time = November 12, 2021, 02:56PM
-- input file = /media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq
-- output folder = /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_mixed
-- minlength = 600
-- maxlength = 1000
-- maxreads = 900
-- n_processes = 20
-- similar_genes = 80.0
-- similar_species_groups = 85.0
-- similar_species = 85.0
-- similar_consensus = 93.0
-- save_fastq = False
-- random = False
-- all_reads = False
-- histogram_only = False
-- species_only = False
------------------------------------------------------------

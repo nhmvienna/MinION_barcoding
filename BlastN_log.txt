@@ -1,1 +1,0 @@
-mkdir: das Verzeichnis „/media/inter/mkapun/projects/MinION_barcoding/results/blast“ kann nicht angelegt werden: Die Datei existiert bereits
