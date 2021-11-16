@@ -2,7 +2,7 @@
 
 - check out the [README.md](https://github.com/nhmvienna/MysteriousAbominableYeti) for instructions how to work on the Phyloserver
 
-In your home directory on the server, clone this repository by typing the following command in your commandline
+- In your home directory on the server, clone this repository by typing the following command in your commandline
 
 ```bash
 git clone https://github.com/nhmvienna/MinION_barcoding
