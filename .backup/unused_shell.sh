@@ -24,7 +24,7 @@ source /opt/venv/amplicon_sorter/bin/activate
 
 python /opt/bioinformatics/amplicon_sorter/amplicon_sorter.py \
   -i /media/inter/mkapun/projects/MinION_barcoding/data/test/sample_c1.fastq \
-  -o /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_c1a \
+  -o /media/inter/mkapun/projects/MinION_barcoding/.results/amplicon_sorter_c1a \
   -np 200 \
   -min 600 \
   -max 1000 \
@@ -32,7 +32,7 @@ python /opt/bioinformatics/amplicon_sorter/amplicon_sorter.py \
 
 python /opt/bioinformatics/amplicon_sorter/amplicon_sorter.py \
   -i /media/inter/mkapun/projects/MinION_barcoding/data/test/Supplementary_File1_reads.fastq \
-  -o /media/inter/mkapun/projects/MinION_barcoding/results/amplicon_sorter_mixed \
+  -o /media/inter/mkapun/projects/MinION_barcoding/.results/amplicon_sorter_mixed \
   -np 20 \
   -min 600 \
   -max 1000 \

@@ -27,7 +27,7 @@ for name in mchai cleeb nhelmer skirchner sreier msittenthaler apalandacic mschw
 
 do
 
-  #userdel "test_"$name
+  # userdel -rf "test_"$name
   sh /media/inter/mkapun/projects/MinION_barcoding/.backup/TestUser.sh ${name}
 
 done
