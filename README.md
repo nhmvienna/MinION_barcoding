@@ -12,5 +12,3 @@ git clone https://github.com/nhmvienna/MinION_barcoding
 ```
 
 -   Then, follow the instruction in shell/workflow.sh
-
--   The slides for this workshop can be found [here](ABOL_2021_bioinf.pdf)
